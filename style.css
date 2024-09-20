@@ -1,0 +1,91 @@
+/*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com*/
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+:root {
+    --color: rgb(255, 255, 255);
+    --bgcolor: #ffffff;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 6rem;
+    line-height: 6rem;
+    -webkit-text-stroke: 2px;
+    margin:auto;
+   
+}
+#over-color{
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+.-translate-x-full {
+    --tw-translate-x: -100%
+}
+
+.-translate-x-full,.transform {
+    transform: var(--tw-transform)
+}
+
+.mix-blend-difference {
+    mix-blend-mode: exclusion;
+}
+
+.filter {
+    filter: var(--tw-filter)
+}
+
+.text-color {
+    color: var(--color)
+}
+
+.text-bgcolor {
+    color: var(--bgcolor)
+}
+
+.bg-bgcolor {
+    background-color: var(--bgcolor)
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    height: 8px;
+    width: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: currentColor;
+    cursor: pointer
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent
+}
+
+.filtered {
+    filter: url(#n0)
+}
+
+.filtered-1,.filtered-1-safari {
+    filter: url(#n1)
+}
+
+body#home .filtered-1 {
+    filter: url(#n2)
+}
+
+body#home .filtered-1-safari {
+    filter: url(#n1)
+}
+
+body#home.is-safari [data-top-agenda] {
+    mix-blend-mode: normal
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<title>Phase zero</title>
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body id="home">
+    
+    <a id="movingText" href="#bio" class="filtered-1 text-bgcolor mix-blend-difference">
+    <span>*pH@se <br> z3r0*</span> <br> <br>
+    <span>¡SSue 8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="smaller">rele@$e</span> 
+    <br><span class="smaller"></span>
+    <br><span class="smaller">tbd</span>
+</a>
+
+<div id="over-color"></div>
+
+    <svg id="visualization" class="fixed inset-0 transform -translate-x-full">
+        <defs>
+            <filter id="n0">
+                <feTurbulence type="turbulence" baseFrequency="0.001 0.1" numOctaves="5" result="NOISE"></feTurbulence>
+                <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="4.5"></feGaussianBlur>
+                <feDisplacementMap in2="NOISE" in="BLURRED" scale="50" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+            </filter>
+            <filter id="n1">
+                <feTurbulence type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="5" result="NOISE" seed="234948"></feTurbulence>
+                <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0"></feGaussianBlur>
+                <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="495" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
+            </filter>
+            <filter id="n2" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="5" result="NOISE" seed="234948"></feTurbulence>
+                <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0"></feGaussianBlur>
+                <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="15" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
+
+                <feColorMatrix in="DISPLACED"
+                    result="RED"
+                    type="matrix"
+                    values="0 0 0 0 0
+                            0 1 0 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0" />
+                            
+                <feColorMatrix in="DISPLACED"
+                    result="GREEN"
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 0 0 0 0
+                            0 0 1 0 0
+                            0 0 0 1 0" />
+                
+                <feColorMatrix in="DISPLACED"
+                    result="BLUE"
+                    type="matrix"
+                    values="1 0 0 0 0
+                            0 1 0 0 0
+                            0 0 0 0 0
+                            0 0 0 1 0" />
+                            
+                <feOffset in="RED" dx="-3" dy="0" result="D_RED" />
+                <feOffset in="GREEN" dx="0" dy="0" result="D_GREEN" />
+                <feOffset in="BLUE" dx="3" dy="0" result="D_BLUE" />
+
+                <feBlend in="D_RED" in2="D_BLUE" out="RB" mode="multiply"/>
+                
+                <feBlend in="D_GREEN" in2="RB" out="RGB" mode="multiply"/>
+
+                
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script src="script.js" async defer></script>
+</body>
+</html>
