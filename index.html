@@ -12,60 +12,58 @@
 </head>
 <body id="home">
     
-    <a id="movingText" href="#p0" class="filtered-1 text-bgcolor mix-blend-difference">
-    <span>*pH@se <br> z3r0*</span> <br>
-    &nbsp;&nbsp;&nbsp;<span class="smaller">@phasezeronyc</span> <br><br>
-    <span>¡SSue 8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <br><span class="smaller">coM¡n9 <br>s()on!</span>
-    <br>&nbsp;&nbsp;&nbsp;<span class="smaller"></span> 
+    <a id="movingText" href="#p0" class="filtered-1 text-bgcolor mix-blend-multiply">
+    <span>SOCIÉTÉ HOLOGRAPHIQUE <br> DE MONTREAL </span> <br>
+    &nbsp;&nbsp;&nbsp;
+    <div id="movingText" href="#p0" class="filtered-1 text-bgcolor mix-blend-difference" class="circle"></div>
 </a>
 <div id="back-color"></div>
 <div id="over-color"></div>
 
     <svg id="visualization" class="fixed inset-0 transform -translate-x-full">
         <defs>
-            <filter id="n0">
+            <!-- <filter id="n0">
                 <feTurbulence type="turbulence" baseFrequency="0.001 0.1" numOctaves="5" result="NOISE"></feTurbulence>
                 <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="4.5"></feGaussianBlur>
                 <feDisplacementMap in2="NOISE" in="BLURRED" scale="50" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-            </filter>
-            <filter id="n1">
+            </filter> -->
+            <!-- <filter id="n1">
                 <feTurbulence type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="5" result="NOISE" seed="234948"></feTurbulence>
                 <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0"></feGaussianBlur>
                 <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="495" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
-            </filter>
+            </filter> -->
             <filter id="n2" color-interpolation-filters="sRGB">
-                <feTurbulence type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="5" result="NOISE" seed="234948"></feTurbulence>
+                <feTurbulence type="fractalNoise" baseFrequency="0.0001 0.001" numOctaves="1" result="NOISE" seed="2349485"></feTurbulence>
                 <feGaussianBlur in="SourceGraphic" result="BLURRED" stdDeviation="0"></feGaussianBlur>
-                <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="15" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
+                <feDisplacementMap id="displacer" in2="NOISE" in="BLURRED" scale="3" xChannelSelector="R" yChannelSelector="R" result="DISPLACED"></feDisplacementMap>
 
                 <feColorMatrix in="DISPLACED"
                     result="RED"
                     type="matrix"
                     values="0 0 0 0 0
-                            0 1 0 0 0
-                            0 0 1 0 0
-                            0 0 0 1 0" />
+                            0 0 0 1 0
+                            0 0 0 1 0
+                            1 0 0 1 0" />
                             
                 <feColorMatrix in="DISPLACED"
                     result="GREEN"
                     type="matrix"
-                    values="1 0 0 0 0
+                    values="0 0 0 1 0
                             0 0 0 0 0
-                            0 0 1 0 0
-                            0 0 0 1 0" />
+                            0 0 0 1 0
+                            1 0 0 1 0" />
                 
                 <feColorMatrix in="DISPLACED"
                     result="BLUE"
                     type="matrix"
-                    values="1 0 0 0 0
-                            0 1 0 0 0
+                    values="0 0 0 1 0
+                            0 0 0 1 0
                             0 0 0 0 0
-                            0 0 0 1 0" />
+                            1 0 0 1 0" />
                             
-                <feOffset in="RED" dx="-3" dy="0" result="D_RED" />
+                <feOffset in="RED" dx="0" dy="-2" result="D_RED" />
                 <feOffset in="GREEN" dx="0" dy="0" result="D_GREEN" />
-                <feOffset in="BLUE" dx="3" dy="0" result="D_BLUE" />
+                <feOffset in="BLUE" dx="0" dy="2" result="D_BLUE" />
 
                 <feBlend in="D_RED" in2="D_BLUE" out="RB" mode="multiply"/>
                 
