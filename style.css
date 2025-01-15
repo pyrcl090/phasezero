@@ -14,16 +14,17 @@ body {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    margin:auto;
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+    margin: auto;
     margin-top: 6%;
     opacity: .9;
 }
 .smaller{
-    font-size: 1.2rem;
-    line-height: 1rem;
+    font-size: 1rem;
+    line-height: .5rem;
 }
+
 #over-color{
     background-color: rgb(129, 129, 129);
     width: 100vw;
@@ -35,20 +36,14 @@ body {
     opacity: .7;
     mix-blend-mode: exclusion;
 }
-/* #back-color{
-    background-color: rgb(255, 255, 255);
-    width: 100vw;
-    height: 100vh;
-    z-index: -3;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-} */
 a{
     text-decoration: none;
 }
 .-translate-x-full {
     --tw-translate-x: -100%
+}
+.under{
+    position: fixed;
 }
 
 .-translate-x-full,.transform {
